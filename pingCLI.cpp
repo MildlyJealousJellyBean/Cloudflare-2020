@@ -39,7 +39,7 @@ void showUsage() {
     cout << "Flags: \n\n";
     cout << "-h, --help\t\tDisplay help menu\n";
     cout << "-t, --ttl\t\t(int 0 - 255) Set IP TTL (Time To Live) in seconds; default = " << defaultTTL << "\n";
-    cout << "-i, --interval\t\t(double) Set interval in seconds between pings; default = " << defaultInterval << "\n";
+    cout << "-i, --interval\t\t(int) Set interval in seconds between pings; default = " << defaultInterval << "\n";
     cout << "-p, --packets\t\t(int) Set number of pings; default = ∞\n";
     cout << "-a, --audible\t\tCreates an audible ping\n" << endl;
     exit(0);
@@ -64,11 +64,16 @@ void postPingStats(int catchCode) {
     else {
         minRTT = 0.0; // Initialized to larger than max value, needs to be reset when no packets are sent
     }
+    // Modifies ping text based on IPv4 vs. IPv6
     string pingText = "ping";
     if (!isIPv4) {
         pingText = "ping6";
     }
-    printf("\n\n--- %s %s statistics ---\n", hostName.c_str(), pingText.c_str());
+    // Prints an extra line if KeyboardInterrupt
+    if (catchCode == SIGINT) {
+        cout << endl;
+    }
+    printf("\n--- %s %s statistics ---\n", hostName.c_str(), pingText.c_str());
     printf("%llu packets transmitted, %llu packets received, %.2f%% packet loss\n", id, sent, packetLoss);
     printf("round-trip min/avg/max/stddev = %.3f/%.3f/%.3f/%.3f ms\n\n", minRTT, average, maxRTT, sqrt(standardDeviation / iterLength));
     exit(catchCode);
@@ -193,13 +198,14 @@ int ping(int TTL, unsigned int sleepDuration, int packets, bool audible) {
         if (audible) {
             cout << '\a';
         }
-        sleep(sleepDuration);
+        usleep(sleepDuration);
     }
     postPingStats(0);  // Display statistics after the run
     return 0;
 }
 
 vector<int> parseArguments(int argc, char *argv[]) {
+    cout << endl;
     vector<int> args = {defaultTTL, defaultInterval, -1, 0};
     // TTL (int), Interval (double), Packets (int), Audible (bool)
     int pointer = 0;
@@ -219,8 +225,8 @@ vector<int> parseArguments(int argc, char *argv[]) {
             if (interval < 0.0) {
                 throw invalid_argument("Out of bounds");
             }
-            args[1] = interval;
             cout << "Ping interval set to " << interval << " seconds" << endl;
+            args[1] = (unsigned int) (interval * 1000000);
         }
         // Packet Flag
         else if (!strncmp(argv[pointer], "-p", 2) || !strncmp(argv[pointer], "--packets", 3)) {
@@ -280,7 +286,7 @@ vector<int> parseArguments(int argc, char *argv[]) {
     }
     // Checks if IP address or hostname was provided
     if (ipAddress.empty()) {
-        cout << "\nNo valid IP address or hostname was provided, aborting Ping CLI tool" << endl;
+        cout << "No valid IP address or hostname was provided, aborting Ping CLI tool" << endl;
         showUsage();
     }
     return args;
@@ -296,8 +302,9 @@ int main (int argc, char *argv[]) {
         // Address (str), isIPv4 (bool), TTL (int), Interval (double), Packets (int), Audible (bool)
         vector<int> args = parseArguments(argc, argv);
         if (argc == 2) {
-            cout << "\nNo flags provided, using default values for TTL and ping interval\n" << endl;
+            cout << "\nNo flags provided, using default values for TTL and ping interval" << endl;
         }
+        cout << endl;
         signal(SIGINT, postPingStats);  // Adds ctrl + c listener to provide post Ping CLI statistics
         ping(args[0], args[1], args[2], args[3]);
     }
