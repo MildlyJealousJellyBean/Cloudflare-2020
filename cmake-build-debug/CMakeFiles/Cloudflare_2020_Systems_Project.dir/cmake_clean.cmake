@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Cloudflare_2020_Systems_Project.dir/main.cpp.o"
+  "CMakeFiles/Cloudflare_2020_Systems_Project.dir/pingCLI.cpp.o"
   "Cloudflare_2020_Systems_Project"
   "Cloudflare_2020_Systems_Project.pdb"
 )

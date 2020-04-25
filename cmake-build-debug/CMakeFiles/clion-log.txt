@@ -1,4 +1,4 @@
-"/Users/parthivc/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project"
+"/Users/parthivc/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo"
 -- The C compiler identification is AppleClang 11.0.0.11000033
 -- The CXX compiler identification is AppleClang 11.0.0.11000033
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug
+-- Build files have been written to: /Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug

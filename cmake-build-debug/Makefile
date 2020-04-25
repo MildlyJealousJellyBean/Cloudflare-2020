@@ -48,10 +48,10 @@ RM = "/Users/parthivc/Library/Application Support/JetBrains/Toolbox/apps/CLion/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project"
+CMAKE_SOURCE_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ Cloudflare_2020_Systems_Project/fast:
 	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/build
 .PHONY : Cloudflare_2020_Systems_Project/fast
 
-main.o: main.cpp.o
+pingCLI.o: pingCLI.cpp.o
 
-.PHONY : main.o
+.PHONY : pingCLI.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/main.cpp.o
-.PHONY : main.cpp.o
+pingCLI.cpp.o:
+	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/pingCLI.cpp.o
+.PHONY : pingCLI.cpp.o
 
-main.i: main.cpp.i
+pingCLI.i: pingCLI.cpp.i
 
-.PHONY : main.i
+.PHONY : pingCLI.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/main.cpp.i
-.PHONY : main.cpp.i
+pingCLI.cpp.i:
+	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/pingCLI.cpp.i
+.PHONY : pingCLI.cpp.i
 
-main.s: main.cpp.s
+pingCLI.s: pingCLI.cpp.s
 
-.PHONY : main.s
+.PHONY : pingCLI.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/main.cpp.s
-.PHONY : main.cpp.s
+pingCLI.cpp.s:
+	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/pingCLI.cpp.s
+.PHONY : pingCLI.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Cloudflare_2020_Systems_Project"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... pingCLI.o"
+	@echo "... pingCLI.i"
+	@echo "... pingCLI.s"
 .PHONY : help
 
 

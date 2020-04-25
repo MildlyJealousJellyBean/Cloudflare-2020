@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/main.cpp" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles/Cloudflare_2020_Systems_Project.dir/main.cpp.o"
+  "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/pingCLI.cpp" "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles/Cloudflare_2020_Systems_Project.dir/pingCLI.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

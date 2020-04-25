@@ -44,10 +44,10 @@ RM = "/Users/parthivc/Library/Application Support/JetBrains/Toolbox/apps/CLion/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project"
+CMAKE_SOURCE_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/Cloudflare_2020_Systems_Project.dir/clean
 CMakeFiles/Cloudflare_2020_Systems_Project.dir/all:
 	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/depend
 	$(MAKE) -f CMakeFiles/Cloudflare_2020_Systems_Project.dir/build.make CMakeFiles/Cloudflare_2020_Systems_Project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Cloudflare_2020_Systems_Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Cloudflare_2020_Systems_Project"
 .PHONY : CMakeFiles/Cloudflare_2020_Systems_Project.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Cloudflare_2020_Systems_Project.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Cloudflare_2020_Systems_Project.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare 2020 Systems Project/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/parthivc/Documents/College/Internships/2020 Summer/Cloudflare/Cloudflare Repo/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/Cloudflare_2020_Systems_Project.dir/rule
 
 # Convenience name for target.
