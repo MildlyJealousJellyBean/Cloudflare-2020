@@ -21,7 +21,7 @@ using namespace std::chrono;
 
 string ipAddress = "", hostName = "";               // Stores IP Address and hostname for post-ping analysis
 int defaultTTL = 64;                                // Default Time To Live in seconds
-int defaultInterval = 1;                            // Default interval between pings in seconds
+unsigned int defaultInterval = 1000000;             // Default interval between pings in seconds
 bool isIPv4;                                        // IP version tracker for post-ping analysis
 const int rollingAverageItemCount = 100;            // Length of rollingAverage array calculations
 double minRTT = defaultTTL * 1.1, maxRTT = 0.0;     // Stores min and max RTT's for post-ping analysis
@@ -206,7 +206,7 @@ int ping(int TTL, unsigned int sleepDuration, int packets, bool audible) {
 
 vector<int> parseArguments(int argc, char *argv[]) {
     cout << endl;
-    vector<int> args = {defaultTTL, defaultInterval, -1, 0};
+    vector<int> args = {defaultTTL, static_cast<int>(defaultInterval), -1, 0};
     // TTL (int), Interval (double), Packets (int), Audible (bool)
     int pointer = 0;
     while (++pointer != argc) {
@@ -214,7 +214,8 @@ vector<int> parseArguments(int argc, char *argv[]) {
         if (!strncmp(argv[pointer], "-t", 2) || !strncmp(argv[pointer], "--ttl", 3)) {
             int ttl = stoi(argv[++pointer]);
             if (ttl < 0 || ttl > 255) {
-                throw invalid_argument("Out of bounds");
+                cout << "This TTL value is out of bounds" << endl;
+                showUsage();
             }
             args[0] = ttl;
             cout << "TTL set to " << ttl << " seconds" << endl;
