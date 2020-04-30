@@ -4,7 +4,7 @@ Cloudflare Internship Application 2020 (Software Engineer - Intern: Systems Proj
 
 You can download the code for this project by executing the following:
 ```
-git clone https://github.com/MildlyJealousJellyBean/Cloudflare-2020.git
+git clone https://github.com/parthivc/Cloudflare-2020.git
 ```
 
 This Ping CLI tool was written in C++20, and can be compiled and run by executing the following
